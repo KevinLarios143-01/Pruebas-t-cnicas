@@ -14,31 +14,28 @@
                         </div>
                     @endif
 
-
-
-                    <h2>   {{ __('Facturas') }}</h2>
+                    <h2>{{ __('Productos') }}</h2>
                     <br>
-                    <a href="{{ url('/nuevasfacts') }}" class="btn btn-success">Nueva Compra</a>
+                    <a href="{{ url('/nuevosproductos') }}" class="btn btn-success">Nuevo Producto</a>
                     <br>
 
                     <table class="table">
                         <tr>
-                            <th>Factura</th>
-                            <th>Fecha</th>
-                            <th>Cliente</th>
-                            <th>Detalles</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
                             <th>Acciones</th>
                         </tr>
-                        @foreach($facturas as $factur)
+                        @foreach($productos as $producto)
                             <tr>
-                                <td>{{$factur->factura}}</td>
-                                <td>{{$factur->fecha}}</td>
-                                <td>{{$factur->cliente->nombre}}</td>
+                                <td>{{$producto->nombre}}</td>
+                                <td>{{$producto->descripcion}}</td>
+                                <td>{{$producto->precio}}</td>
+                                <td>{{$producto->stock}}</td>
                                 <td>
-                                    <a class="btn btn-danger" href="{{ url('/DetalladoF',$factur->factura) }}">Ver detalles</a>
-                                </td>
-                                <td>
-                                    <a class="btn btn-danger" href="{{ url('EliminarF',$factur->factura) }}">Eliminar</a>
+                                    <a class="btn btn-danger" href="{{ url('EliminarP',$producto->id) }}">Eliminar</a>
+
                                 </td>
                             </tr>
                         @endforeach

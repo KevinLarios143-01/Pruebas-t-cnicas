@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Http\Requests\factura as facturasRequest;
+use App\Models\Factura;
+
 class FacturaController extends Controller
 {
       /**
@@ -24,24 +27,34 @@ class FacturaController extends Controller
     public function index()
     {
         $query=DB::table('facturas')->get();
+
+        return view('factura',['facturas'=>$query, ]);
+    }
+
+
+    public function registro(facturasRequest $request){
+        //dd($request);
+        $reg=new Factura;
+        $reg->fecha=$request->fecha;
+        $reg->cliente=$request->cliente;
+        $reg->tipopago=$request->tipopago;
+        $reg->save();
+        return view('factura',['facturas'=>$reg]);
+    }
+
+    public function datas(){
+        $query=DB::table('clientes')->get()->where('estado',"1");
         return view('factura',['facturas'=>$query]);
     }
 
 
-    public function registro(productosRequest $request){
-        //dd($request);
-        $reg=new Producto;
-        $reg->nombre=$request->get('nombre');
-        $reg->descripcion=$request->get('descripcion');
-        $reg->precio=$request->get('precio');
-        $reg->stock=$request->get('stock');
-        $reg->save();
-        return redirect('productos');
-    }
-
-    public function detalles($factura, $cantidad){
-        $query=DB::table('productos')->get();
-        return view('productos',['productos'=>$query]);
+    /*public function detalles($factura){
+        $query = DB::table('detalle_factura')
+        ->join('factura', function (JoinClause $join) {
+            $join->on('factura.factura', '=', 'detalle_factura.factura')->orOn();
+        })
+        ->get();
+        return view('facturalF',['facturalF'=>$query]);
     }
 
     public function eliminar(){
@@ -49,7 +62,7 @@ class FacturaController extends Controller
         $reg->estado="0";
         $reg->update();
         return redirect('productos');
-    }
+    }*/
 
 
 }

@@ -20,8 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [App\Http\Controllers\FacturaController::class, 'index'])->name('facturas');
 
 Route::get('/clientes', [App\Http\Controllers\ClienteController::class, 'index'])->name('clientes');
 Route::get('/nuevosclientes', function(){return view('nuevocliente');});
@@ -36,7 +35,9 @@ Route::get('EliminarP/{id}', [App\Http\Controllers\ProductoController::class, 'e
 
 
 Route::get('/facturas', [App\Http\Controllers\FacturaController::class, 'index'])->name('facturas');
-Route::get('/nuevasfacts', function(){return view('crearfacturas');});
+Route::get('/nuevasfacts',[App\Http\Controllers\FacturaController::class, 'datas'])->name('facturas');
 Route::post('NuevasF', [App\Http\Controllers\FacturaController::class, 'registro']);
 Route::get('EliminarF/{id}', [App\Http\Controllers\FacturaController::class, 'eliminar']);
+
+Route::get('/detalladoF/{id}', [App\Http\Controllers\FacturaController::class, 'detalles'])->name('detalles');
 
