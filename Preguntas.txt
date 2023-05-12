@@ -1,0 +1,177 @@
+1. ¿Que significa php y para que se utiliza?
+
+    significa Hipertex PreProcessor y es un lenguaje que se utiliza mayormente para programación web.
+
+2. ¿Qué es una variable PHP y como se declaran?
+
+    Una variable es la que guarda información, se declaran:
+    $variable.
+
+3. ¿Que son los arrays en PHP y como se declaran?
+    
+    Un array es una variable que puede contener varios datos, se declaran:
+    $array = array(1,2,3);
+
+4. ¿Qué son las funciones PHP y como se declaran?
+
+    Es un código en bloque para llamar desde cualquier parte del código, se declaran:
+    function nombreFuncion($parametros){
+        //codigo
+    }
+5. ¿Qué es un bucle en PHP y cuales son los tipos de bucles que existen?
+
+    Es un código que se repite en base a una condición, los tipos son:
+    while, do while, for, foreach.
+
+6. ¿Qué son las expresiones regulares en PHP?
+
+    Son patrones que se utilizan para buscar, validar y reemplazar texto.
+
+7. ¿Cómo se manejan las excepciones en PHP?
+
+    Se utiliza try y catch.
+
+8. ¿Qué son las cookies en PHP?
+
+    Son archivos que se guardan en el navegador del usuario.
+
+9. ¿Qué son las sesiones en PHP y como se utilizan?
+
+    Son variables que se guardan en el servidor, se utilizan:
+    session_start();
+    $_SESSION['variable'] = 'valor';
+
+10. ¿Cómo se conecta PHP con una base de datos y se realiza una consulta?
+    Un ejemplo con mysql:
+    Se utiliza mysqli_connect() y mysqli_query().
+
+11. ¿Cuál es la función que se utiliza para imprimir texto en PHP?
+    
+    a. echo.
+
+12. ¿Cuál es la diferencia entre el operador "==" y el operador "==="?
+
+    a. Uno compara valores en igualdad y el otro en identidad.
+
+13. ¿Qué funcion se utiliza para obtener la longitud de una cadena en PHP?
+
+    a. strlen().
+14. ¿Cual es la función que se utiliza para agear elementos al final de un array en PHP?
+    
+    a. array_push().
+
+15. ¿Qué es una superglobal en PHP?
+
+    a. Es una variable que se puede acceder desde cualquier parte del código.
+
+16. ¿Cuál es el operador que se utiliza para concatenar dos cadenas en PHP?
+
+    b. .
+
+17. ¿Que función se utiliza para convertir una cadena a minúsculas en PHP?
+    
+    b. strtolower().
+
+18. ¿Cuál es la función que se utiliza para obtener la fecha y la hora actual en PHP?
+    
+    b. date().
+
+19. ¿Qué es una clase en PHP?
+
+    c. Una plantilla o modelo que se usa para crear objetos en PHP.
+
+20. ¿Que función se utiliza para conectar PHP con MySQL?
+
+    b. mysqli_connect().
+
+21. En PHP, las variables siempre deben ser declaradas antes de ser utilizadas.
+
+    a. Verdadero.
+
+22. En PHP, el operador ++ incrementa en 1 el valor de una variable.
+
+    a. Verdadero.
+
+23. En PHP, el operador % devuelve el resto de una división.
+
+    a. Verdadero.
+
+24. En PHP, la función include() se utiliza para incluir el contenido de un archivo en otro.
+    
+    a. Verdadero.
+
+25. En PHP, la función substr() se utiliza para obtener una subcadena de una cadena dada.
+
+    a. Verdadero.
+
+26. En PHP, el operador && se utiliza para concatenar dos cadenas.
+
+    b. Falso.
+
+27. En PHP, la función array_merge() se utiliza para fusionar dos o más arrays en uno solo.
+    
+    a. Verdadero.
+
+28. En PHP, la función unset() se utiliza para destruir una variable o un elemento de un array.
+    
+    a. Verdadero.
+
+29. En PHP, la función round() se utiliza para redondear un número decimal al número entero más cercano.
+
+    a. Verdadero.
+
+30. En php la función explode() se utiliza para dividir una cadena en un array utilizando un delimitador específico.
+
+    a. Verdadero.
+
+31. ¿Qué es SQL Server y para que se utiliza?
+    
+    Es un sistema de bases de datos relacionales, se utiliza para almacenar y realizar consultas de datos.
+
+32. ¿Cuál es la diferencia entre una tabla y una vista en SQL Server?
+
+    Una tabla almacena datos y una vista almacena una consulta.
+
+33. ¿Qué es una clave primaria en SQL Server y cómo se define?
+
+    Es un campo que únicó que identifica a cada registro de una tabla, se define:
+
+    CREATE TABLE Tabla(
+        id INT PRIMARY KEY,
+        nombre VARCHAR(50)
+    );
+
+34. ¿Qué es un indice en SQL Server y para que se utiliza?
+
+    Es un campo que se utiliza para buscar registros de una tabla, se utiliza:
+
+    CREATE INDEX indice ON Tabla (campo);
+
+35. ¿Qué son las funciones de agregado en SQL Server y cuales son las más comunes?
+
+    Se utilizan para realizar operaciones de datos, las más comunes son:
+    SUM, COUNT, MAX, MIN y AVG.
+
+36. ¿Qué es una transacción en SQL Server y porqué es importante?
+
+    Son operaciones que se realizan,es importante porque si existen fallos, se deshacen todos los cambios.
+
+37. ¿Que es una consulta SELECT en SQL Server y cómo se utiliza?
+
+    Es una acción que se utiliza para obtener datos de una tabla, se utiliza:
+
+    SELECT * FROM Tabla;
+
+
+38. ¿Qué es una clausula where en SQL Server y porque se utiliza?
+
+    Es una palabra reservada del lenguaje para realizar búsquedas específicas.
+    Se utiliza para filtrar registros.
+
+39. ¿Cómo se realiza la unión entre dos tablas en SQL Server?
+
+    Se utiliza JOIN.
+
+40. ¿Como se realiza una consulta para obtener los datos de una tabla ordenados de manera ascendente o descendente?
+
+    Se utiliza ORDER BY campo ASC o DESC.
